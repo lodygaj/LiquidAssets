@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:id="@+id/txtUsername"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignBottom="@+id/edtTxtUsername"
+        android:layout_alignRight="@+id/txtPassword"
+        android:layout_alignEnd="@+id/txtPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password: "
+        android:id="@+id/txtPassword"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtUsername"
+        android:layout_alignRight="@+id/txtConfirmPassword"
+        android:layout_alignEnd="@+id/txtConfirmPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password: "
+        android:id="@+id/txtConfirmPassword"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_below="@+id/txtPasswordDetail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(8-16 characters, Must contain a number and capital letter)"
+        android:id="@+id/txtPasswordDetail"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtPassword"
+        android:layout_alignLeft="@+id/txtUsername"
+        android:layout_alignStart="@+id/txtUsername" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin: "
+        android:id="@+id/txtAdmin"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_below="@+id/txtConfirmPassword"
+        android:layout_alignRight="@+id/txtConfirmPassword"
+        android:layout_alignEnd="@+id/txtConfirmPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTxtUsername"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtUsername"
+        android:layout_alignRight="@+id/txtPasswordDetail"
+        android:layout_alignEnd="@+id/txtPasswordDetail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtTxtPassword"
+        android:layout_above="@+id/txtPasswordDetail"
+        android:layout_toRightOf="@+id/txtUsername"
+        android:layout_alignRight="@+id/txtPasswordDetail"
+        android:layout_alignEnd="@+id/txtPasswordDetail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtTxtConfirmPassword"
+        android:layout_above="@+id/radioAdmin"
+        android:layout_alignRight="@+id/txtPasswordDetail"
+        android:layout_alignEnd="@+id/txtPasswordDetail"
+        android:layout_toRightOf="@+id/txtConfirmPassword"
+        android:layout_toEndOf="@+id/txtConfirmPassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/btnCancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btnSubmit"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:layout_toStartOf="@+id/btnCancel" />
+
+    <RadioGroup
+        android:id="@+id/radioAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtAdmin"
+        android:layout_below="@+id/txtConfirmPassword"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/radioYes"
+            android:checked="false"
+            android:layout_below="@+id/edtTxtConfirmPassword"
+            android:layout_toRightOf="@+id/txtConfirmPassword"
+            android:layout_toEndOf="@+id/txtConfirmPassword" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/radioNo"
+            android:checked="true"
+            android:layout_below="@+id/edtTxtConfirmPassword"
+            android:layout_toRightOf="@+id/radioYes"
+            android:layout_toEndOf="@+id/radioYes" />
+
+    </RadioGroup>
+
+</RelativeLayout>

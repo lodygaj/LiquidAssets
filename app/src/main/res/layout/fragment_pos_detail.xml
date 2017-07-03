@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="#C0C0C0"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:      "
+        android:id="@+id/txtDescription"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sku:    "
+        android:id="@+id/txtSku"
+        android:layout_below="@+id/txtDescription"
+        android:layout_alignRight="@+id/txtDescription"
+        android:layout_alignEnd="@+id/txtDescription"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price:    "
+        android:id="@+id/txtPrice"
+        android:layout_below="@+id/txtSku"
+        android:layout_alignRight="@+id/txtDescription"
+        android:layout_alignEnd="@+id/txtDescription"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity:    "
+        android:id="@+id/txtQuantity"
+        android:layout_below="@+id/txtPrice"
+        android:layout_alignRight="@+id/txtDescription"
+        android:layout_alignEnd="@+id/txtDescription"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescriptionDisplay"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/txtDescription"
+        android:layout_alignBottom="@+id/txtDescription"
+        android:layout_toRightOf="@+id/txtDescription"
+        android:layout_toEndOf="@+id/txtDescription"
+        android:text="Description" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSkuDisplay"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtDescription"
+        android:layout_toRightOf="@+id/txtSku"
+        android:layout_toEndOf="@+id/txtSku"
+        android:text="Sku" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPriceDisplay"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_below="@+id/txtSku"
+        android:layout_toRightOf="@+id/txtPrice"
+        android:layout_toEndOf="@+id/txtPrice"
+        android:text="Price" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtQuantityDisplay"
+        android:layout_below="@+id/txtPrice"
+        android:layout_toRightOf="@+id/txtQuantity"
+        android:layout_toEndOf="@+id/txtQuantity"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:text="Quantity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Quantity: "
+        android:id="@+id/txtAddQuantity"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:layout_marginTop="102dp"
+        android:layout_below="@+id/txtQuantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="2"
+        android:id="@+id/edtTxtAddQuantity"
+        android:layout_alignBottom="@+id/txtAddQuantity"
+        android:layout_toRightOf="@+id/txtAddQuantity"
+        android:layout_toEndOf="@+id/txtAddQuantity"
+        android:text="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add To Cart"
+        android:id="@+id/btnSubmit"
+        android:layout_alignTop="@+id/btnBackToSale"
+        android:layout_toLeftOf="@+id/btnBackToSale"
+        android:layout_toStartOf="@+id/btnBackToSale" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back To Sale"
+        android:id="@+id/btnBackToSale"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="% Off: "
+        android:id="@+id/txtPercentOff"
+        android:textSize="22dp"
+        android:textColor="#000000"
+        android:layout_above="@+id/edtTxtAddQuantity"
+        android:layout_toLeftOf="@+id/edtTxtAddQuantity"
+        android:layout_toStartOf="@+id/edtTxtAddQuantity" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="2"
+        android:id="@+id/edtTxtPercentOff"
+        android:layout_above="@+id/edtTxtAddQuantity"
+        android:layout_toRightOf="@+id/txtPercentOff"
+        android:layout_toEndOf="@+id/txtPercentOff" />
+
+</RelativeLayout>

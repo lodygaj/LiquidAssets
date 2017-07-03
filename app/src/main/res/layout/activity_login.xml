@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.liquidassets.liquidassetsproject.LoginActivity"
+    android:background="@drawable/aquarium">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USERNAME:"
+        android:id="@+id/txtUserName"
+        android:textSize="24dp"
+        android:layout_above="@+id/editTxtPassword"
+        android:layout_toLeftOf="@+id/editTxtPassword"
+        android:layout_toStartOf="@+id/editTxtPassword"
+        android:textColor="#1900FF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD:"
+        android:id="@+id/txtPassword"
+        android:textSize="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/txtUserName"
+        android:layout_alignEnd="@+id/txtUserName"
+        android:textColor="#1900FF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTxtUsername"
+        android:layout_alignBottom="@+id/txtUserName"
+        android:layout_alignRight="@+id/editTxtPassword"
+        android:layout_alignEnd="@+id/editTxtPassword"
+        android:layout_alignLeft="@+id/editTxtPassword"
+        android:layout_alignStart="@+id/editTxtPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTxtPassword"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/btnLogin"
+        android:layout_alignStart="@+id/btnLogin"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/btnLogin"
+        android:layout_below="@+id/editTxtPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:onClick="login" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgJoefish"
+        android:layout_above="@+id/editTxtUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:src="@drawable/joefish" />
+
+</RelativeLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today&apos;s Totals"
+        android:id="@+id/txtToday"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal:  "
+        android:id="@+id/txtSubtotal"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtToday"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSubtotalDisplay"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/txtSubtotal"
+        android:layout_alignBottom="@+id/txtSubtotal"
+        android:layout_toRightOf="@+id/txtSubtotal"
+        android:layout_toEndOf="@+id/txtSubtotal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tax:  "
+        android:id="@+id/txtTax"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtSubtotal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/txtSubtotalDisplay"
+        android:layout_toStartOf="@+id/txtSubtotalDisplay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTaxDisplay"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/txtTax"
+        android:layout_alignBottom="@+id/txtTax"
+        android:layout_toRightOf="@+id/txtTax"
+        android:layout_toEndOf="@+id/txtTax" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:  "
+        android:id="@+id/txtTotal"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_below="@+id/txtTax"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/txtSubtotalDisplay"
+        android:layout_toStartOf="@+id/txtSubtotalDisplay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTotalDisplay"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_alignBaseline="@+id/txtTotal"
+        android:layout_alignBottom="@+id/txtTotal"
+        android:layout_toRightOf="@+id/txtTotal"
+        android:layout_toEndOf="@+id/txtTotal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBlank"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="227dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View by date: "
+        android:id="@+id/txtViewByDate"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/txtTotal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendar"
+        android:layout_below="@+id/txtViewByDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: "
+        android:id="@+id/txtSelectedSubtotal"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/calendar"
+        android:layout_toLeftOf="@+id/txtTotalDisplay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSelectedSubtotalDisplay"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/txtSelectedSubtotal"
+        android:layout_alignBottom="@+id/txtSelectedSubtotal"
+        android:layout_toRightOf="@+id/txtSelectedSubtotal"
+        android:layout_toEndOf="@+id/txtSelectedSubtotal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tax:"
+        android:id="@+id/txtSelectedTax"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtSelectedSubtotal"
+        android:layout_toLeftOf="@+id/txtTotalDisplay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSelectedTaxDisplay"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_alignBaseline="@+id/txtSelectedTax"
+        android:layout_alignBottom="@+id/txtSelectedTax"
+        android:layout_toRightOf="@+id/txtSelectedTax"
+        android:layout_toEndOf="@+id/txtSelectedTax" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:id="@+id/txtSelectedTotal"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtSelectedTax"
+        android:layout_toLeftOf="@+id/txtTotalDisplay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSelectedTotalDisplay"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/txtSelectedTotal"
+        android:layout_alignBottom="@+id/txtSelectedTotal"
+        android:layout_toRightOf="@+id/txtSelectedTotal"
+        android:layout_toEndOf="@+id/txtSelectedTotal" />
+
+</RelativeLayout>

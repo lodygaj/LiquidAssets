@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:      "
+        android:id="@+id/txtDescription"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/txtPrice"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price:    "
+        android:id="@+id/txtPrice"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignBottom="@+id/edtTxtPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity:    "
+        android:id="@+id/txtQuantity"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/edtTxtQuantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btnSubmit"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:layout_toStartOf="@+id/btnCancel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/btnCancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescriptionDisplay"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtDescription"
+        android:layout_toEndOf="@+id/txtDescription"
+        android:text="Description"
+        android:textColor="#000000"
+        android:textSize="24dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTxtPrice"
+        android:ems="3"
+        android:inputType="number"
+        android:layout_below="@+id/txtDescriptionDisplay"
+        android:layout_toRightOf="@+id/txtDescription"
+        android:layout_alignRight="@+id/txtDescriptionDisplay"
+        android:layout_alignEnd="@+id/txtDescriptionDisplay" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTxtQuantity"
+        android:inputType="number"
+        android:ems="3"
+        android:layout_below="@+id/edtTxtPrice"
+        android:layout_alignLeft="@+id/edtTxtPrice"
+        android:layout_alignStart="@+id/edtTxtPrice"
+        android:layout_alignRight="@+id/edtTxtPrice"
+        android:layout_alignEnd="@+id/edtTxtPrice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="% Off: "
+        android:id="@+id/txtPercentOff"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignBottom="@+id/edtTxtPercentOff"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="3"
+        android:id="@+id/edtTxtPercentOff"
+        android:layout_below="@+id/edtTxtQuantity"
+        android:layout_alignLeft="@+id/edtTxtQuantity"
+        android:layout_alignStart="@+id/edtTxtQuantity"
+        android:layout_alignRight="@+id/edtTxtQuantity"
+        android:layout_alignEnd="@+id/edtTxtQuantity" />
+
+</RelativeLayout>

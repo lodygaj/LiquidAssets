@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.liquidassets.liquidassetsproject.SettingsActivity"
+    android:background="@drawable/aquarium">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New User"
+        android:id="@+id/btnCreateUser"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnDeleteUser"
+        android:layout_alignEnd="@+id/btnDeleteUser" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete User"
+        android:id="@+id/btnDeleteUser"
+        android:layout_below="@+id/btnCreateUser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnChangePassword"
+        android:layout_alignEnd="@+id/btnChangePassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:id="@+id/btnChangePassword"
+        android:layout_below="@+id/btnDeleteUser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Backup Database"
+        android:id="@+id/btnBackupDatabase"
+        android:layout_below="@+id/btnChangePassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnChangePassword"
+        android:layout_alignEnd="@+id/btnChangePassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restore Database"
+        android:id="@+id/btnRestoreDatabase"
+        android:layout_below="@+id/btnBackupDatabase"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnBackupDatabase"
+        android:layout_alignEnd="@+id/btnBackupDatabase" />
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.liquidassets.liquidassetsproject.BlankFragment"
+        android:id="@+id/fragment1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/btnCreateUser"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btnCreateUser" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:id="@+id/btnLogout"
+        android:layout_alignBottom="@+id/fragment1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/fragment1"
+        android:layout_toStartOf="@+id/fragment1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Sales"
+        android:id="@+id/btnViewSales"
+        android:layout_below="@+id/btnRestoreDatabase"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnRestoreDatabase"
+        android:layout_alignEnd="@+id/btnRestoreDatabase" />
+</RelativeLayout>

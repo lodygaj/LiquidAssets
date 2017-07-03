@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:id="@+id/txtDescription"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price   "
+        android:id="@+id/txtPrice"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txtExtPrice"
+        android:layout_toStartOf="@+id/txtExtPrice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity   "
+        android:id="@+id/txtQuantity"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txtPrice"
+        android:layout_toStartOf="@+id/txtPrice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ext. Price"
+        android:id="@+id/txtExtPrice"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:layout_above="@+id/saleList"
+        android:layout_alignRight="@+id/txtSubtotalDisplay"
+        android:layout_alignEnd="@+id/txtSubtotalDisplay" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finalize Sale"
+        android:id="@+id/btnFinalize"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/txtTotalDisplay"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:   "
+        android:id="@+id/txtTotal"
+        android:layout_alignTop="@+id/txtTotalDisplay"
+        android:layout_toLeftOf="@+id/txtTotalDisplay"
+        android:layout_toStartOf="@+id/txtTotalDisplay"
+        android:textColor="#000000"
+        android:textSize="24dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saleList"
+        android:layout_below="@+id/txtDescription"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/txtSubtotalDisplay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/txtTaxDisplay"
+        android:layout_above="@+id/txtTotalDisplay"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="24dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tax:   "
+        android:id="@+id/txtTax"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/txtSubtotalDisplay"
+        android:layout_alignRight="@+id/txtTotal"
+        android:layout_alignEnd="@+id/txtTotal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:id="@+id/txtSubtotalDisplay"
+        android:layout_above="@+id/txtTaxDisplay"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#000000"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal:   "
+        android:id="@+id/txtSubtotal"
+        android:layout_above="@+id/txtTax"
+        android:layout_toLeftOf="@+id/txtSubtotalDisplay"
+        android:layout_toStartOf="@+id/txtSubtotalDisplay"
+        android:textSize="24dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="% Off: "
+        android:id="@+id/txtPercentOffTotal"
+        android:layout_alignTop="@+id/txtSubtotal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textSize="22dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="2"
+        android:id="@+id/edtTxtPercentOffTotal"
+        android:layout_alignBottom="@+id/txtPercentOffTotal"
+        android:layout_toRightOf="@+id/txtPercentOffTotal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/btnAdd"
+        android:layout_alignTop="@+id/edtTxtPercentOffTotal"
+        android:layout_toRightOf="@+id/edtTxtPercentOffTotal"
+        android:layout_toEndOf="@+id/edtTxtPercentOffTotal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:id="@+id/btnRemove"
+        android:layout_alignBottom="@+id/btnAdd"
+        android:layout_toRightOf="@+id/btnAdd"
+        android:layout_toEndOf="@+id/btnAdd" />
+</RelativeLayout>
